@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Feature selection - CW04</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body><div class="wrap">
+<header><h1>CW04: PHP Forms Lab</h1><p>Exercise 1 - feature selection</p></header>
+<main>
+<h2>The Case of the Missing Features</h2>
+<p>Choose zero, one, or several features. On a Mac, hold Command to select multiple options.</p>
+<form action="formtest.php" method="post">
+<label for="fictional_name">Fictional name</label>
+<input type="text" id="fictional_name" name="fictional_name" maxlength="70" value="Demo Student" required>
+<label for="features">Features</label>
+<select id="features" name="features[]" multiple size="3" aria-describedby="feature_hint">
+<option value="Chat">Chat</option>
+<option value="Email">Email</option>
+<option value="Shell">Shell</option>
+</select>
+<p class="small" id="feature_hint">No feature selection is allowed. Hold Command (Mac) or Ctrl (Windows) to select more than one.</p>
+<button type="submit">Submit features</button>
+</form>
+<p><a href="index.php">Back to home</a></p>
+</main><footer>CSC Web Programming - CW04</footer></div></body></html>

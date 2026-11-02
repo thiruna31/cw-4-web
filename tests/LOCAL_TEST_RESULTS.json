@@ -1,0 +1,112 @@
+{
+  "runtime": "PHP CLI local web server (not CODD)",
+  "results": [
+    {
+      "test": "PHP warm-up",
+      "pass": true,
+      "observation": "Hello world, numeric random paragraph, and literal rand(1, 10) are present"
+    },
+    {
+      "test": "Home",
+      "pass": true,
+      "observation": "Links to both required activities appear"
+    },
+    {
+      "test": "T01 no optional features",
+      "pass": true,
+      "observation": "No selection produces clear message"
+    },
+    {
+      "test": "T01 one selection",
+      "pass": true,
+      "observation": "Chat appears once"
+    },
+    {
+      "test": "T01 three selections",
+      "pass": true,
+      "observation": "Chat, Email and Shell appear"
+    },
+    {
+      "test": "T02 malformed scalar",
+      "pass": true,
+      "observation": "Scalar selection rejected without warning"
+    },
+    {
+      "test": "T02 unknown selection",
+      "pass": true,
+      "observation": "Unknown option rejected"
+    },
+    {
+      "test": "Escaped output",
+      "pass": true,
+      "observation": "Script-looking input displayed as text"
+    },
+    {
+      "test": "Valid four-field submission",
+      "pass": true,
+      "observation": "Success confirmation; CSV header and one record written"
+    },
+    {
+      "test": "Invalid email",
+      "pass": true,
+      "observation": "Validation error; row count unchanged"
+    },
+    {
+      "test": "Missing name",
+      "pass": true,
+      "observation": "Validation error; row count unchanged"
+    },
+    {
+      "test": "Invalid student ID",
+      "pass": true,
+      "observation": "Validation error; row count unchanged"
+    },
+    {
+      "test": "Invalid grade",
+      "pass": true,
+      "observation": "Validation error; row count unchanged"
+    },
+    {
+      "test": "Safe HTML display",
+      "pass": true,
+      "observation": "HTML markup escaped; valid row written"
+    },
+    {
+      "test": "Second valid append",
+      "pass": true,
+      "observation": "Second valid submission appends exactly one row"
+    },
+    {
+      "test": "GET to processor",
+      "pass": true,
+      "observation": "GET without form is not saved"
+    },
+    {
+      "test": "CSV final row count",
+      "pass": true,
+      "observation": "4 CSV rows (1 header and 3 successful records) in isolated temporary test"
+    },
+    {
+      "test": "Extra record-count audit",
+      "pass": true,
+      "observation": "Read-only audit reports three accepted records without exposing IDs/emails"
+    },
+    {
+      "test": "Extra escaped preview",
+      "pass": true,
+      "observation": "Unsafe-looking HTML was displayed as plain text without saving"
+    },
+    {
+      "test": "Extra preview validation",
+      "pass": true,
+      "observation": "Missing preview text gets a controlled error"
+    },
+    {
+      "test": "Extra session visit counter",
+      "pass": true,
+      "observation": "PHP session starts before HTML and displays a counter"
+    }
+  ],
+  "passed": 21,
+  "total": 21
+}

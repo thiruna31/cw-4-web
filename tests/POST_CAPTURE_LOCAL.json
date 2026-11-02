@@ -1,0 +1,89 @@
+{
+  "environment": "PHP local HTTP requests (not browser DevTools / not CODD)",
+  "requests": [
+    {
+      "method": "POST",
+      "path": "formtest.php",
+      "content_type": "application/x-www-form-urlencoded",
+      "encoded_body": "fictional_name=Demo+Student",
+      "parsed_fields": {
+        "fictional_name": [
+          "Demo Student"
+        ]
+      }
+    },
+    {
+      "method": "POST",
+      "path": "formtest.php",
+      "content_type": "application/x-www-form-urlencoded",
+      "encoded_body": "fictional_name=Demo+Student&features%5B%5D=Chat",
+      "parsed_fields": {
+        "fictional_name": [
+          "Demo Student"
+        ],
+        "features[]": [
+          "Chat"
+        ]
+      }
+    },
+    {
+      "method": "POST",
+      "path": "formtest.php",
+      "content_type": "application/x-www-form-urlencoded",
+      "encoded_body": "fictional_name=Demo+Student&features%5B%5D=Chat&features%5B%5D=Email&features%5B%5D=Shell",
+      "parsed_fields": {
+        "fictional_name": [
+          "Demo Student"
+        ],
+        "features[]": [
+          "Chat",
+          "Email",
+          "Shell"
+        ]
+      }
+    },
+    {
+      "method": "POST",
+      "path": "formtest.php",
+      "content_type": "application/x-www-form-urlencoded",
+      "encoded_body": "fictional_name=Demo+Student&features=Chat",
+      "parsed_fields": {
+        "fictional_name": [
+          "Demo Student"
+        ],
+        "features": [
+          "Chat"
+        ]
+      }
+    },
+    {
+      "method": "POST",
+      "path": "formtest.php",
+      "content_type": "application/x-www-form-urlencoded",
+      "encoded_body": "fictional_name=Demo+Student&features%5B%5D=Chat&features%5B%5D=Intruder",
+      "parsed_fields": {
+        "fictional_name": [
+          "Demo Student"
+        ],
+        "features[]": [
+          "Chat",
+          "Intruder"
+        ]
+      }
+    },
+    {
+      "method": "POST",
+      "path": "formtest.php",
+      "content_type": "application/x-www-form-urlencoded",
+      "encoded_body": "fictional_name=%3Cscript%3Ealert%281%29%3C%2Fscript%3E&features%5B%5D=Email",
+      "parsed_fields": {
+        "fictional_name": [
+          "<script>alert(1)</script>"
+        ],
+        "features[]": [
+          "Email"
+        ]
+      }
+    }
+  ]
+}

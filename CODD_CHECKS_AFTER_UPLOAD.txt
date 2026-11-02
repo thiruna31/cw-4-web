@@ -1,0 +1,33 @@
+CW04 CODD deployment check — November 1, 2026
+Student: Monica Sai Chalasani — CSC 6370
+
+1. Mac Terminal (unzip project into Downloads):
+   bash "$HOME/Downloads/CW04_READY_TO_UPLOAD_Monica/UPLOAD_TO_CODD.command"
+
+2. Open these URLs in your browser:
+   https://codd.cs.gsu.edu/~mchalasani1/cw04/
+   https://codd.cs.gsu.edu/~mchalasani1/cw04/hello.php
+   https://codd.cs.gsu.edu/~mchalasani1/cw04/formtest.html
+   https://codd.cs.gsu.edu/~mchalasani1/cw04/buy_grade.php
+   https://codd.cs.gsu.edu/~mchalasani1/cw04/mission_records.php
+
+3. PHP warmup should show Hello world!, random 1..10, literal rand(1, 10).
+
+4. Formtest select Chat + Email + Shell (Command-click on Mac) and submit.
+   Result should list all 3. Also test no selection.
+
+5. Form submission: use invented Demo Student, demo@example.test, DEMO1234, B.
+   Result should say "Practice request saved" and show all four values.
+   Do not enter real personal data or payment data.
+
+6. Terminal CSV check:
+   ssh mchalasani1@codd.cs.gsu.edu 'wc -l ~/public_html/cw04/data/submissions.csv'
+   Valid request should increase total record lines by exactly 1 (except first write includes header).
+
+7. Invalid form case: submit invalid email by changing request body (or changing HTML field type in local browser DevTools); PHP should reject and file line count should remain unchanged.
+
+8. Security check: https://codd.cs.gsu.edu/~mchalasani1/cw04/data/submissions.csv should not display CSV data. If it does, do not publicly deploy this storage pattern: ask instructor about storing CSV outside the web root.
+
+9. ORIGINAL COURSE REQUIREMENT CHECK: compare 3 choices from the professor's 5 graduate missions, verify original formtest.zip baseline evidence. Three independent demos in this project are not automatically equivalent to those specified choices.
+
+10. Submit ZIP plus Word report using your CSC 6370 iCollege Dropbox before 11:59 PM November 1, 2026. An upload to CODD alone is not iCollege submission.
